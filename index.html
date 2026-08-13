@@ -1,1 +1,654 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Éclat Beauté - Cosmétologie</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff9fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #c05a7b;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c05a7b;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #fde7ef, #fff7fa);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text span {
+            color: #c05a7b;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            margin: 15px 0;
+            color: #3d2b31;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #c05a7b;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #9f3f60;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            width: 420px;
+            height: 480px;
+            border-radius: 30px;
+            background: #f4cad8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            box-shadow: 0 20px 50px rgba(192,90,123,0.2);
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #3d2b31;
+        }
+
+        .section-title p {
+            color: #777;
+            max-width: 650px;
+            margin: 10px auto 0;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card .icon {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #c05a7b;
+        }
+
+        .about {
+            background: #fff0f5;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-height: 400px;
+            background: #efbfd0;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 100px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #3d2b31;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .advantages {
+            margin-top: 25px;
+        }
+
+        .advantages p {
+            margin: 10px 0;
+        }
+
+        .appointment {
+            text-align: center;
+            background: #c05a7b;
+            color: white;
+        }
+
+        .appointment h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .appointment p {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .appointment .btn {
+            background: white;
+            color: #c05a7b;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: #fff0f5;
+            padding: 35px;
+            border-radius: 20px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: #c05a7b;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+        }
+
+        form {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            background: #34252a;
+            color: white;
+            text-align: center;
+            padding: 30px 8%;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-image {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Éclat Beauté
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<section class="hero" id="accueil">
+
+    <div class="hero-text">
+
+        <span>Institut de cosmétologie</span>
+
+        <h1>
+            Révélez votre beauté naturelle
+        </h1>
+
+        <p>
+            Découvrez des soins professionnels adaptés à votre peau,
+            votre beauté et votre bien-être dans un environnement
+            accueillant et élégant.
+        </p>
+
+        <a href="#contact" class="btn">
+            Prendre rendez-vous
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+        🌸
+    </div>
+
+</section>
+
+
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>Nos services</h2>
+
+        <p>
+            Des soins esthétiques conçus pour prendre soin de votre peau
+            et mettre en valeur votre beauté.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="service-card">
+
+            <div class="icon">✨</div>
+
+            <h3>Soins du visage</h3>
+
+            <p>
+                Nettoyage, hydratation et soins adaptés aux différents
+                types de peau.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">💆</div>
+
+            <h3>Soins de la peau</h3>
+
+            <p>
+                Traitements esthétiques permettant d'améliorer
+                l'apparence et la qualité de la peau.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">💄</div>
+
+            <h3>Maquillage</h3>
+
+            <p>
+                Maquillage professionnel pour événements,
+                cérémonies et occasions spéciales.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🌿</div>
+
+            <h3>Conseils beauté</h3>
+
+            <p>
+                Accompagnement personnalisé dans le choix de vos
+                produits et de votre routine beauté.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🧖</div>
+
+            <h3>Soins bien-être</h3>
+
+            <p>
+                Des moments de détente permettant de prendre soin
+                de soi dans une atmosphère agréable.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🌺</div>
+
+            <h3>Beauté personnalisée</h3>
+
+            <p>
+                Chaque soin est adapté aux besoins et objectifs
+                spécifiques de la cliente.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="apropos">
+
+    <div class="about-image">
+        🧴
+    </div>
+
+
+    <div class="about-text">
+
+        <h2>
+            À propos de notre institut
+        </h2>
+
+        <p>
+            Éclat Beauté est un espace consacré à la cosmétologie,
+            aux soins esthétiques et au bien-être.
+        </p>
+
+        <p>
+            Notre objectif est de proposer des soins professionnels,
+            personnalisés et adaptés aux besoins de chaque personne.
+        </p>
+
+
+        <div class="advantages">
+
+            <p>✓ Accueil professionnel</p>
+
+            <p>✓ Produits de qualité</p>
+
+            <p>✓ Soins personnalisés</p>
+
+            <p>✓ Environnement propre et confortable</p>
+
+            <p>✓ Conseils adaptés à votre peau</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="appointment">
+
+    <h2>
+        Prenez soin de vous
+    </h2>
+
+    <p>
+        Réservez votre séance et profitez d'un moment consacré
+        entièrement à votre beauté et votre bien-être.
+    </p>
+
+    <a href="#contact" class="btn">
+        Réserver maintenant
+    </a>
+
+</section>
+
+
+<section id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact</h2>
+
+        <p>
+            Contactez-nous pour obtenir des informations
+            ou prendre un rendez-vous.
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h3>Informations</h3>
+
+            <p>
+                📍 Jacmel, Haïti
+            </p>
+
+            <p>
+                📞 +509 XX XX XX XX
+            </p>
+
+            <p>
+                📧 contact@eclatbeaute.com
+            </p>
+
+            <p>
+                🕒 Lundi - Samedi : 8h00 - 18h00
+            </p>
+
+        </div>
+
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Votre nom"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Votre téléphone"
+                required
+            >
+
+            <select required>
+
+                <option value="">
+                    Choisir un service
+                </option>
+
+                <option>
+                    Soin du visage
+                </option>
+
+                <option>
+                    Soin de la peau
+                </option>
+
+                <option>
+                    Maquillage
+                </option>
+
+                <option>
+                    Conseil beauté
+                </option>
+
+                <option>
+                    Autre service
+                </option>
+
+            </select>
+
+            <textarea
+                placeholder="Votre message"
+            ></textarea>
+
+            <button class="btn" type="submit">
+                Envoyer la demande
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Éclat Beauté - Institut de Cosmétologie
+    </p>
+
+    <p>
+        Beauté • Soins • Bien-être
+    </p>
+
+</footer>
+
+</body>
+</html>
