@@ -1,1 +1,2337 @@
+/* =========================
+   STYLE GENERAL
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c05a7b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c05a7b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #fde7ef,
+        #fff8fa
+    );
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 620px;
+}
+
+.hero-text span {
+    display: inline-block;
+    color: #c05a7b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    color: #3d2b31;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 420px;
+    height: 480px;
+    background-color: #f4cad8;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(192, 90, 123, 0.20);
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: #c05a7b;
+    color: white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9f3f60;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(192, 90, 123, 0.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #3d2b31;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: auto;
+    color: #777;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.service-card .icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #c05a7b;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about {
+    background-color: #fff0f5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+
+    min-height: 420px;
+
+    background-color: #efbfd0;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 100px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 40px;
+
+    color: #3d2b31;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.advantages {
+    margin-top: 25px;
+}
+
+.advantages p {
+    margin: 12px 0;
+
+    color: #555;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   RENDEZ-VOUS
+========================= */
+
+.appointment {
+    background-color: #c05a7b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.appointment h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.appointment p {
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+}
+
+.appointment .btn {
+    background: white;
+
+    color: #c05a7b;
+}
+
+.appointment .btn:hover {
+    background: #fff0f5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: #fff0f5;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    color: #c05a7b;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+
+    color: #555;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #c05a7b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(192, 90, 123, 0.10);
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+button {
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #34252a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 8%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .services {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-image {
+        width: 360px;
+        height: 420px;
+    }
+}
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+        height: 380px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .appointment h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================
+   PETIT TELEPHONE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .service-card {
+        padding: 25px 18px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+}/* =========================
+   STYLE GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c05a7b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c05a7b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #fde7ef,
+        #fff8fa
+    );
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 620px;
+}
+
+.hero-text span {
+    display: inline-block;
+    color: #c05a7b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    color: #3d2b31;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 420px;
+    height: 480px;
+    background-color: #f4cad8;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(192, 90, 123, 0.20);
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: #c05a7b;
+    color: white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9f3f60;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(192, 90, 123, 0.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #3d2b31;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: auto;
+    color: #777;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.service-card .icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #c05a7b;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about {
+    background-color: #fff0f5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+
+    min-height: 420px;
+
+    background-color: #efbfd0;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 100px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 40px;
+
+    color: #3d2b31;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.advantages {
+    margin-top: 25px;
+}
+
+.advantages p {
+    margin: 12px 0;
+
+    color: #555;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   RENDEZ-VOUS
+========================= */
+
+.appointment {
+    background-color: #c05a7b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.appointment h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.appointment p {
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+}
+
+.appointment .btn {
+    background: white;
+
+    color: #c05a7b;
+}
+
+.appointment .btn:hover {
+    background: #fff0f5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: #fff0f5;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    color: #c05a7b;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+
+    color: #555;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #c05a7b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(192, 90, 123, 0.10);
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+button {
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #34252a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 8%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .services {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-image {
+        width: 360px;
+        height: 420px;
+    }
+}
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+        height: 380px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .appointment h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================
+   PETIT TELEPHONE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .service-card {
+        padding: 25px 18px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+}/* =========================
+   STYLE GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c05a7b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c05a7b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #fde7ef,
+        #fff8fa
+    );
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 620px;
+}
+
+.hero-text span {
+    display: inline-block;
+    color: #c05a7b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    color: #3d2b31;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 420px;
+    height: 480px;
+    background-color: #f4cad8;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(192, 90, 123, 0.20);
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: #c05a7b;
+    color: white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9f3f60;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(192, 90, 123, 0.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #3d2b31;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: auto;
+    color: #777;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.service-card .icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #c05a7b;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about {
+    background-color: #fff0f5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+
+    min-height: 420px;
+
+    background-color: #efbfd0;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 100px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 40px;
+
+    color: #3d2b31;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.advantages {
+    margin-top: 25px;
+}
+
+.advantages p {
+    margin: 12px 0;
+
+    color: #555;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   RENDEZ-VOUS
+========================= */
+
+.appointment {
+    background-color: #c05a7b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.appointment h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.appointment p {
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+}
+
+.appointment .btn {
+    background: white;
+
+    color: #c05a7b;
+}
+
+.appointment .btn:hover {
+    background: #fff0f5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: #fff0f5;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    color: #c05a7b;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+
+    color: #555;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #c05a7b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(192, 90, 123, 0.10);
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+button {
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #34252a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 8%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .services {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-image {
+        width: 360px;
+        height: 420px;
+    }
+}
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+        height: 380px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .appointment h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================
+   PETIT TELEPHONE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .service-card {
+        padding: 25px 18px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+}/* =========================
+   STYLE GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    background: #ffffff;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #c05a7b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c05a7b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 60px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #fde7ef,
+        #fff8fa
+    );
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 620px;
+}
+
+.hero-text span {
+    display: inline-block;
+    color: #c05a7b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    color: #3d2b31;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 19px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 420px;
+    height: 480px;
+    background-color: #f4cad8;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(192, 90, 123, 0.20);
+}
+
+
+/* =========================
+   BOUTONS
+========================= */
+
+.btn {
+    display: inline-block;
+
+    background-color: #c05a7b;
+    color: white;
+
+    padding: 14px 30px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #9f3f60;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(192, 90, 123, 0.25);
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: #3d2b31;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: auto;
+    color: #777;
+    font-size: 17px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.service-card .icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #c05a7b;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #666;
+}
+
+
+/* =========================
+   A PROPOS
+========================= */
+
+.about {
+    background-color: #fff0f5;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+
+    min-height: 420px;
+
+    background-color: #efbfd0;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 100px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(192, 90, 123, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 40px;
+
+    color: #3d2b31;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+.advantages {
+    margin-top: 25px;
+}
+
+.advantages p {
+    margin: 12px 0;
+
+    color: #555;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   RENDEZ-VOUS
+========================= */
+
+.appointment {
+    background-color: #c05a7b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.appointment h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.appointment p {
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+}
+
+.appointment .btn {
+    background: white;
+
+    color: #c05a7b;
+}
+
+.appointment .btn:hover {
+    background: #fff0f5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: #fff0f5;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.contact-info h3 {
+    color: #c05a7b;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+
+    color: #555;
+}
+
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.07);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #c05a7b;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(192, 90, 123, 0.10);
+}
+
+textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+button {
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #34252a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px 8%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media screen and (max-width: 1000px) {
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .services {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero-image {
+        width: 360px;
+        height: 420px;
+    }
+}
+
+
+/* =========================
+   TELEPHONE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 350px;
+        height: 380px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 350px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .appointment h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================
+   PETIT TELEPHONE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .service-card {
+        padding: 25px 18px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+}
